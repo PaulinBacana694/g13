@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Remix</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      animation: fadeIn 5s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2em;
+      letter-spacing: 3px;
+      color: #ccc;
+    }
+
+    .glitch {
+      font-size: 1.5em;
+      color: #fff;
+      position: relative;
+      animation: glitch 2s infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes glitch {
+      0% {
+        text-shadow: 2px 2px #f0f, -2px -2px #0ff;
+      }
+      20% {
+        text-shadow: -2px 2px #0ff, 2px -2px #f0f;
+      }
+      40% {
+        text-shadow: 2px -2px #f0f, -2px 2px #0ff;
+      }
+      60% {
+        text-shadow: -2px -2px #0ff, 2px 2px #f0f;
+      }
+      80% {
+        text-shadow: 0 0 10px #fff;
+      }
+      100% {
+        text-shadow: 2px 2px #f0f, -2px -2px #0ff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>The remix will take place in</h1>
+    <div class="glitch">*******</div>
+  </div>
+</body>
+</html>
